@@ -9,31 +9,70 @@
 <body>
 
 
-<header>
-  <nav class= "links">
+  <header>
+    <div id="wrap">
+      <nav class= "links">
 
-    <div class="col-xs-3">
-      <a class="navbar-brand" href="#">Flixter</a>
+        <div class="col-xs-3">
+          <a class="navbar-brand" href="#">Flixter</a>
+        </div>
+        <div class= "linksab">
+          <div class="col-xs-7">
+            <%= link_to 'See all Courses', '#' %>
+          </div>
+
+          <div class="col-xs-2">
+            <%= link_to 'Log in', '#' %>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <header>   
+      <hr />  
+      <br class="clear" />
+
+      <div class="container">
+        <%= yield %>
+      </div>
+      <br class="clr" />
+      <div class="footer">
+        <div class="container">
+          <div class="col-xs-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', '#'%>
+            <br />
+            <%= link_to 'View Dashboard', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#'%>
+            <br />
+            <%= link_to 'Careers', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>Contact</b>
+            <br />
+            <%= link_to 'theFirehoseProject', '#'%>
+            <br />
+            <%= link_to 'Cambridge, MA', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>Social</b>
+            <br />
+            
+            <%= image_tag 'facebook.png'%>
+            <%= image_tag 'twitter.png'%>
+            <%= image_tag 'linkedin.png'%>
+          </div>
+          
+        </div>
+      </div>
     </div>
-    <div class= "linksab">
-    <div class="col-xs-7">
-      <%= link_to 'See all Courses', '#' %>
-    </div>
-     
-    <div class="col-xs-2">
-      <%= link_to 'Log in', '#' %>
-    </div>
-
-    </div>
-   
-</nav>
-
-<header>   
-<hr />  
- <br class="clear" />
-
-
-<%= yield %>
+  </div>
 
 </body>
 </html>

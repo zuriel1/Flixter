@@ -5,7 +5,6 @@ clear:both;
 .links {
 padding-top:26px;
 font-family: "Comic Sans MS", cursive, sans-serif;
-
 }
 
 .navbar-brand {
@@ -15,7 +14,7 @@ font-weight: 900;
 letter-spacing: 1px;
 }
 
-.linksab{
+.linksab {
 padding-top: 20px;
 
 }
@@ -30,5 +29,16 @@ clear:both;
 display: block;
 height: 2px;
 border-top: 1px solid;
+}
+
+a.footer {
+  color: white;
+}
+
+.clr {
+  clear:both;
+}
+.icon{
+	line-weight: 900;
 
 }
