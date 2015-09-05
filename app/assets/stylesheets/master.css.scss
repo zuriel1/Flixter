@@ -3,32 +3,31 @@ clear:both;
 }
 
 .links {
-padding-top:26px;
+padding-top:16px;
 font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .navbar-brand {
-color:#00008B;
-font-size: 25px;
-font-weight: 900;
-letter-spacing: 1px;
+ color:#00008B;
+ font-size: 25px;
+ font-weight: 900;
+ letter-spacing: 1px;
 }
 
 .linksab {
-padding-top: 20px;
-
+ padding-top: 20px;
 }
 
 a {
-color: black;
+ color: black;
 }
 
 
 hr {
-clear:both;
-display: block;
-height: 2px;
-border-top: 1px solid;
+ clear:both;
+ display: block;
+ height: 2px;
+ border-top: 1px solid;
 }
 
 a.footer {
@@ -38,7 +37,34 @@ a.footer {
 .clr {
   clear:both;
 }
-.icon{
-	line-weight: 900;
+
+.hero {
+  background: url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
 
 }
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+.frosty {
+  background:rgba(0,0,0, 0.5);
+  color:white;
+}
+.frosty h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.frosty h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+
