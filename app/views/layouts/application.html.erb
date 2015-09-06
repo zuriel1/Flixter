@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-   <header>
+ <header>
    <nav class= "links">
     <div class="col-xs-3">
       <a class="navbar-brand" href="#">Flixter</a>
@@ -17,53 +17,66 @@
         <%= link_to 'See all Courses', '#' %>
       </div>
       <div class="col-xs-2">
-        <%= link_to 'Log in', '#' %>
+                  <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Log in", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+        </div>
       </div>
-    </div>
     </nav>
+
     <header>   
-  <hr />  
-  <br class="clear" />
+      <hr />  
+      <br class="clear" />
+      <div class="container">
+        <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </div>
+      <br class="clr" />
+      <div class="footer">
+        <div class="container">
+          <div class="col-xs-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', '#'%>
+            <br />
+            <%= link_to 'View Dashboard', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#'%>
+            <br />
+            <%= link_to 'Careers', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>Contact</b>
+            <br />
+            <%= link_to 'theFirehoseProject', '#'%>
+            <br />
+            <%= link_to 'Cambridge, MA', '#' %>
+          </div>
+          <div class="col-xs-3">
+            <b>Social</b>
+            <br />
+            <%= image_tag 'facebook.png'%>
+            <%= image_tag 'twitter.png'%>
+            <%= image_tag 'linkedin.png'%>
+          </div>
 
-  <div class="container">
-    <%= yield %>
-  </div>
-  <br class="clr" />
-  <div class="footer">
-    <div class="container">
-      <div class="col-xs-3">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', '#'%>
-        <br />
-        <%= link_to 'View Dashboard', '#' %>
+        </div>
       </div>
-      <div class="col-xs-3">
-        <b>About</b>
-        <br />
-        <%= link_to 'Team', '#'%>
-        <br />
-        <%= link_to 'Careers', '#' %>
-      </div>
-      <div class="col-xs-3">
-        <b>Contact</b>
-        <br />
-        <%= link_to 'theFirehoseProject', '#'%>
-        <br />
-        <%= link_to 'Cambridge, MA', '#' %>
-      </div>
-      <div class="col-xs-3">
-        <b>Social</b>
-        <br />
-        <%= image_tag 'facebook.png'%>
-        <%= image_tag 'twitter.png'%>
-        <%= image_tag 'linkedin.png'%>
-      </div>
-
     </div>
   </div>
-</div>
-</div>
 
 </body>
 </html>
