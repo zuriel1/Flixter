@@ -3,11 +3,12 @@ class Instructor::CoursesController < ApplicationController
   before_action :authenticate_user!
 
   def new
-  	@course = Course.new
+    @course = Course.new
   end
-  
-   def create
+
+  def create
     @course = current_user.courses.create(course_params)
+    redirect_to instructor_course_path(@course)
     if @course.valid?
       redirect_to instructor_course_path(@course)
     else
@@ -24,5 +25,4 @@ class Instructor::CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(:title, :description, :cost)
   end
-
 end
