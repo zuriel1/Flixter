@@ -4,8 +4,10 @@ Flixter::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   devise_for :users
 
-   resources :courses, :only => [:index, :show]
-    namespace :instructor do
+  resources :courses, :only => [:index, :show]
+  resources :lessons, :only => [:show]
+
+  namespace :instructor do
     resources :sections, :only => [] do
       resources :lessons, :only => [:new, :create]
     end
