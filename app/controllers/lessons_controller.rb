@@ -10,7 +10,7 @@ class LessonsController < ApplicationController
 
 	 def require_course_enrollment_for_lesson
 	 	this_course = current_lesson.section.course
-		if !current_lesson.section.course.user.enrolled_in?(this_course) 
+		if !current_user.enrolled_in?(this_course) 
 		redirect_to course_path(this_course), alert: 'Enroll now'
 
     end
