@@ -37,8 +37,7 @@ class Instructor::SectionsController < ApplicationController
 
   helper_method :current_course
   def current_course
-    #@current_course ||= Course.find(params[:course_id])
-  current_section.course
+    current_course ||= Course.find(params[:course_id])
   end
   
  

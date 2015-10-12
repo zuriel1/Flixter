@@ -16,7 +16,7 @@
  <header>
    <nav class= "links">
     <div class="col-xs-3">
-      <a class="navbar-brand" href="#">Flixter</a>
+        <%= link_to 'Flixter', root_path, :class => 'navbar-brand' %>
     </div>
     <div class= "linksab">
       <div class="col-xs-7">
@@ -24,7 +24,9 @@
       </div>
       <div class="col-xs-2">
                   <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
+          Logged in as <strong><%= current_user.email %></strong>
+            <li><%= link_to 'My Dashboard', dashboard_path %></li>
+
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           <% else %>
