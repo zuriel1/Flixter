@@ -7,7 +7,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .footer {
@@ -26,4 +26,21 @@ body {
 
 .footer a {
   color:white;
+}
+
+$footer-height-mobile: 200px;
+@media (max-width: 750px) {
+  #footer {
+    height:$footer-height-mobile;
+  }
+
+  #wrap {
+    margin: 0 auto -$footer-height-mobile;
+    /* Pad bottom by footer height */
+    padding: 0 0 $footer-height-mobile;
+  }
+#footer .social {
+    margin-top:10px;
+     }
+
 }
