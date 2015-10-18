@@ -153,9 +153,14 @@ ul .header .glyphicon {
 
 #social {
   position: relative;
-  left: 15px;
+  left: 10px;
 }
 
+.spcial a:hover {
+  text-decoration:none;
+}
 
-
+.wrap {
+  word-wrap: break-word;
+}
 
